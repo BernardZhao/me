@@ -5,15 +5,17 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: "Bernard Zhao's personal site",
-  siteDescription: "Bernard Zhao's personal site",
+  siteName: "Bernard Zhao",
+  siteDescription: "",
   templates: {
     Post: '/blog/:title',
   },
   plugins: [
     {
-      // Create posts from markdown files
       use: 'gridsome-plugin-tailwindcss',
+    },
+    {
+      // Create posts from markdown files
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Post',
