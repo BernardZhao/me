@@ -8,7 +8,7 @@ Updating my personal site has been on my todo list for a long while, probably ev
 
 ## How it went
 
-Other than the interal bikeshedding of what to actually have as content on the site, the process of building the site was easy. I was already somewhat familiar with Gridsome, and cloning a blog starter meant I didn't even have to set up the internal GraphQL queries myself. Most of the actual "coding" really just involved playing around with Tailwind classes and adding small easter eggs on the front page (try clicking on the quote). Maybe I will get around to adding something actually cool, but more on that later.
+Other than the internal bikeshedding of what to actually have as content on the site, the process of building the site was easy. I was already somewhat familiar with Gridsome, and cloning a blog starter meant I didn't even have to set up the internal GraphQL queries myself. Most of the actual "coding" really just involved playing around with Tailwind classes and adding small easter eggs on the front page (try clicking on the quote). Maybe I will get around to adding something actually cool, but more on that later.
 
 ### Thoughts on Tailwind
 
