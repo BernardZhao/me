@@ -12,17 +12,25 @@
     </article>
   </Layout>
 </template>
+
 <page-query>
   query Post ($path: String!) {
     post: post (path: $path) {
       id
       title
       content
+      description
       date (format: "D MMMM YYYY")
       timeToRead
     }
   }
 </page-query>
+
+<static-query>
+  query { metadata { siteUrl } }
+</static-query>
+
+
 <script>
 export default {
   name: "Post",
@@ -31,6 +39,24 @@ export default {
       title: this.$page.post.title,
       meta: [
         { name: "description", content: this.$page.post.description },
+        // open-graph tags
+        {
+          property: 'og:title',
+          content: this.$page.post.title
+        },
+        {
+          property: 'og:description',
+          content: this.$page.post.description
+        },
+        // {
+        //   property: 'og:image',
+        //   content: this.$page.post.cover_image || ''
+        // },
+        {
+          property: 'og:url',
+          content: this.$static.metadata.siteUrl + this.$page.post.path
+        },
+        // Twitter
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:description", content: this.$page.post.description },
         { name: "twitter:title", content: this.$page.post.title },
