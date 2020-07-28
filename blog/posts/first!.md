@@ -14,7 +14,7 @@ Other than the internal bikeshedding of what to actually have as content on the 
 
 As expected with a project involving mostly static content, most of my effort really went into making things look nice. Here are a few takeaways I had working with Tailwind:
 
-- **Responsive design is easy**: This was the number one thing that I found nice about Tailwind. By responsive I mainly mean with respect to screen size, but even `hover` or the other psuedo classes made building reactive content super simple.
+- **Responsive design is easy**: This was the number one thing that I found nice about Tailwind. By responsive I mainly mean with respect to screen size, but even `hover` or the other psuedo classes made building reactive content super simple. Try changing the screen size here and on the home page.
 
 - **Losing default styles is a tradeoff**: One of the hardest things for me to get initially was the loss of automatically styled and spaced `h1`, `a`, and other everyday HTML tags. I got around this by using a typography [plugin](https://tailwindcss-typography.netlify.app/) that I use it for all the extended text content on this site, and it seems to do its job okay - how does it look on your screen? That being said not having to worry about any tag having default spacing made making titles and cards much easier.
 
