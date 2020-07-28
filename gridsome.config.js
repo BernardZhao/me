@@ -7,7 +7,7 @@
 module.exports = {
   siteName: "Bernard Zhao",
   siteDescription: "",
-  siteURL: "https:/www.bernardzhao.com/",
+  siteUrl: "https:/www.bernardzhao.com",
   templates: {
     Post: '/blog/:title',
   },
