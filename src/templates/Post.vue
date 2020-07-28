@@ -1,17 +1,15 @@
 <template>
   <Layout>
-    <div class="p-8">
-      <g-link to="/blog" class="link">&larr; Go Back</g-link>
-      <article class="prose prose-sm lg:prose-lg xl:prose-xl max-w-none">
-        <div class="post-title">
-          <h1 class="serif-font-face display-3">{{$page.post.title}}</h1>
-          <p class="post-date">{{ $page.post.date}} | {{$page.post.timeToRead}} min read</p>
-        </div>
-        <div class="post-content">
-          <p v-html="$page.post.content" />
-        </div>
-      </article>
-    </div>
+    <article class="p-8">
+      <g-link class="hover:underline lg:text-lg" to="/blog">&larr; Go Back</g-link>
+      <div>
+        <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl text-gray-900 leading-tight">{{$page.post.title}}</h1>
+        <p class="lg:text-lg text-gray-900">{{ $page.post.date}} | <span class="italic">{{$page.post.timeToRead}} min read</span></p>
+      </div>
+      <div class="prose prose-sm lg:prose-lg xl:prose-xl max-w-none">
+        <p v-html="$page.post.content" />
+      </div>
+    </article>
   </Layout>
 </template>
 <page-query>
@@ -27,6 +25,11 @@
 </page-query>
 <script>
 export default {
-  name: "Post"
+  name: "Post",
+  metaInfo() {
+    return {
+      title: this.$page.post.title
+    }
+  }
 };
 </script>

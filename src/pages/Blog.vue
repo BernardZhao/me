@@ -1,7 +1,7 @@
 <template>
   <Layout>
-    <div class>
-      <h1 class="display-2 serif-font-face">Blog</h1>
+    <div class="p-6 text-center sm:text-left">
+      <h1 class="text-5xl md:text-7xl font-serif text-gray-900"><g-link class="underline sm:no-underline hover:underline" to="/">Berny's</g-link> Blog</h1>
       <div>
         <section class="posts">
           <Post v-for="edge in $page.allPost.edges" :key="edge.node.id" :post="edge.node" />

@@ -10,6 +10,10 @@ module.exports = {
   templates: {
     Post: '/blog/:title',
   },
+  // For g-image workaround
+  chainWebpack: config => {
+    config.resolve.alias.set('@images', '@/assets/images')
+  },
   plugins: [
     {
       use: 'gridsome-plugin-tailwindcss',

@@ -18,4 +18,10 @@
   src: url("../assets/altedin.ttf");
   font-weight: normal;
 }
+
+@font-face {
+  font-family: Tinos;
+  src: url("../assets/Tinos-Regular.ttf");
+  font-weight: normal;
+}
 </style>

@@ -6,8 +6,8 @@
         <a href="https://github.com/BernardZhao" class="text-xl lg:text-2xl">
           @<span class="hover:underline">BernardZhao</span>
         </a>
-        <p>Computer Science @ UC Berkeley '21</p>
-        <p class="italic" @click="increment('quotes_counter', quotes.length)" @mouseover="hover = true" @mouseleave="hover = false">
+        <p class="lg:text-lg">Computer Science @ UC Berkeley '21</p>
+        <p class="lg:text-lg italic" @click="increment('quotes_counter', quotes.length)" @mouseover="hover = true" @mouseleave="hover = false">
           {{quotes[quotes_counter][0]}}
           <span
             :class="hover ? 'md:opacity-100' : ''"
@@ -15,12 +15,11 @@
           >- {{quotes[quotes_counter][1]}}</span>
         </p>
       </div>
+      <!-- Terrible workaround, until https://github.com/gridsome/gridsome/issues/292 gets fixed. -->
       <g-image
+        @click="increment('portraits_counter', 5)"
         class="md:ml-2 rounded-full md:rounded-none object-cover h-64 w-64 md:h-auto md:w-auto"
-        alt="portrait"
-        src="~/assets/1.jpg"
-        width="800"
-        quality="100"
+        :src="require(`!!assets-loader?width=800&quality=100!@images/${portraits[portraits_counter]}`)"
       />
     </div>
 
@@ -34,7 +33,10 @@
         The best way to reach me is on
         <a
           href="https://t.me/bernardzhao"
-        >Telegram</a>.
+        >Telegram</a>, but also feel free to shoot me an 
+        <a href="mailto:bernard.zhao.us@gmail.com">
+          email.
+        </a>
       </p>
       <p>
         I have been trying to upload more photos to
@@ -47,7 +49,7 @@
       <h3>Experience</h3>
       <p>
         Check out my resume
-        <g-link to="/Resume.pdf">here</g-link>.
+        <a href="/Resume.pdf">here</a>.
       </p>
 
       <g-link to="/blog">
@@ -78,8 +80,7 @@ export default {
         "3.jpg",
         "4.jpg",
         "5.png",
-      ],
-      images: [],
+      ]
     };
   },
   methods: {
