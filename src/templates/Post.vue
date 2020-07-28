@@ -7,7 +7,7 @@
         <p class="lg:text-lg text-gray-900">{{ $page.post.date}} | <span class="italic">{{$page.post.timeToRead}} min read</span></p>
       </div>
       <div class="prose prose-sm lg:prose-lg xl:prose-xl max-w-none">
-        <p v-html="$page.post.content" />
+        <div v-html="$page.post.content" />
       </div>
     </article>
   </Layout>
