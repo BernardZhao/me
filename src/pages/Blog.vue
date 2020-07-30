@@ -34,7 +34,15 @@ import Post from "../components/Post";
 export default {
   components: { Post },
   metaInfo: {
-    title: "Blog"
+    title: "Blog",
+    link: [
+      {
+        rel: 'alternate',
+        type: 'application/rss+xml',
+        title: "Subscribe",
+        href: '/feed.xml'
+      }
+    ]
   }
 };
 </script>

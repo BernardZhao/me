@@ -26,6 +26,16 @@ module.exports = {
         typeName: 'Post',
         path: 'blog/posts/*.md',
       }
+    },
+    {
+    use: 'gridsome-plugin-feed',
+      options: {
+        contentTypes: ['Post'],
+        feedOptions: {
+          title: 'Beranrd Zhao',
+          description: "Bernard's personal blog"
+        }
+      }
     }
   ],
 
