@@ -4,7 +4,7 @@
       <div class="flex justify-between items-center">
         <g-link class="hover:underline lg:text-lg" to="/blog">&larr; Go Back</g-link>
         <a href="feed://www.bernardzhao.com/feed.xml">
-          <svg width=20 height=20 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 448"><circle cx="64" cy="384" r="64"/><path d="M0 149.344v85.344c117.632 0 213.344 95.68 213.344 213.312h85.312c0-164.672-133.984-298.656-298.656-298.656z"/><path d="M0 0v85.344C200 85.344 362.688 248 362.688 448H448C448 200.96 247.04 0 0 0z"/></svg>
+          <svg width=20 height=20 xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 448 448"><circle cx="64" cy="384" r="64"/><path d="M0 149.344v85.344c117.632 0 213.344 95.68 213.344 213.312h85.312c0-164.672-133.984-298.656-298.656-298.656z"/><path d="M0 0v85.344C200 85.344 362.688 248 362.688 448H448C448 200.96 247.04 0 0 0z"/></svg>
         </a>
       </div>
       <div>
