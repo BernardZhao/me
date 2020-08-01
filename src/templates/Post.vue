@@ -69,6 +69,14 @@ export default {
         { name: "twitter:site", content: "@bernyzhao" },
         // { name: "twitter:image", content: this.getCoverImage },
         { name: "twitter:creator", content: "@bernyzhao" }
+      ],
+      link: [
+        {
+          rel: 'alternate',
+          type: 'application/rss+xml',
+          title: "Subscribe",
+          href: '/feed.xml'
+        }
       ]
     }
   }

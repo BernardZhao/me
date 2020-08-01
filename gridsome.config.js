@@ -32,7 +32,7 @@ module.exports = {
       options: {
         contentTypes: ['Post'],
         feedOptions: {
-          title: 'Beranrd Zhao',
+          title: 'Bernard Zhao',
           description: "Bernard's personal blog"
         }
       }
