@@ -6,7 +6,7 @@ module.exports = {
       'src/components/**/*.vue',
       'src/layouts/**/*.vue',
       'src/pages/**/*.vue',
-      'src/templates/**/*.js',
+      'src/templates/**/*.vue',
     ]
   },
   theme: {
