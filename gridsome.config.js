@@ -3,6 +3,7 @@
 
 // Changes here requires a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
+const marked = require('marked')
 
 module.exports = {
   siteName: "Bernard Zhao",
@@ -34,7 +35,12 @@ module.exports = {
         feedOptions: {
           title: 'Bernard Zhao',
           description: "Bernard's personal blog"
-        }
+        },
+        nodeToFeedItem: node => ({
+          title: node.title,
+          date: node.date,
+          content: marked(node.content)
+        })
       }
     }
   ],
