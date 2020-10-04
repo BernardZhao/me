@@ -2,18 +2,25 @@
   "name": "me",
   "private": true,
   "scripts": {
-    "build": "gridsome build",
+    "build": "gridsome build && lambda:build",
     "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "lambda:dev": "netlify-lambda serve src/lambda",
+    "lambda:build": "netlify-lambda build src/lambda"
   },
   "dependencies": {
     "@gridsome/remark-prismjs": "^0.4.0",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.3",
     "@tailwindcss/typography": "^0.2.0",
+    "axios": "^0.20.0",
+    "eslint": "^7.10.0",
+    "eslint-plugin-vue": "^7.0.0",
     "gridsome": "^0.7.21",
     "gridsome-plugin-feed": "^1.0.2",
-    "marked": "^1.1.1"
+    "marked": "^1.2.0",
+    "netlify-lambda": "^2.0.1",
+    "tailwindcss": "^1.8.10"
   },
   "devDependencies": {
     "gridsome-plugin-tailwindcss": "^3.0.1",

@@ -23,7 +23,7 @@
       />
     </div>
 
-    <article class="prose prose-sm lg:prose-lg xl:prose-2xl p-8 max-w-none">
+    <article class="prose prose-sm lg:prose-lg xl:prose-2xl pl-8 pr-8 pt-8 max-w-none">
       <h3>About</h3>
       <p>
         I am a student originally from the 916 Sacramento area.
@@ -55,14 +55,33 @@
       <g-link to="/blog">
         <h3>Blog &rarr;</h3>
       </g-link>
+
+      <h3>What I've been listening to</h3>
     </article>
+    <div class="pl-8 pr-8 pt-4 max-w-none">
+      <lastfm :request="{method: 'user.getrecenttracks', user: 'BernardZhao', limit: 5, format: 'json'}">
+        <template slot-scope="{ data, error, loading }">
+          <div v-if="loading"> Loading... </div>
+          <div v-else-if="error">{{error}}</div>
+          <div v-else-if="data">
+            <song-card v-for="(track, index) in data.recenttracks.track" :key="index" :track="track" />
+          </div>
+        </template>
+      </lastfm>
+    </div>
   </Layout>
 </template>
 
 <script>
+import lastfm from "@/components/LastFM"
+import SongCard from "@/components/SongCard"
 export default {
   metaInfo: {
     title: "Me",
+  },
+  components: {
+    lastfm,
+    SongCard
   },
   data() {
     return {

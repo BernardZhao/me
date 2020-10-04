@@ -1,15 +1,14 @@
 module.exports = {
-  purge: {
-    // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
-    enabled: process.env.NODE_ENV === 'production',
-    content: [
-      'src/components/**/*.vue',
-      'src/layouts/**/*.vue',
-      'src/pages/**/*.vue',
-      'src/templates/**/*.vue',
-    ]
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
   },
   theme: {
+    extend: {
+      animation: {
+        'spin-slow': 'spin 4s linear infinite',
+      }
+    },
     fontSize: {
       'xs': '.75rem',
       'sm': '.875rem',
