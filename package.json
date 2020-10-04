@@ -2,7 +2,7 @@
   "name": "me",
   "private": true,
   "scripts": {
-    "build": "gridsome build && lambda:build",
+    "build": "gridsome build && npm run lambda:build",
     "develop": "gridsome develop",
     "explore": "gridsome explore",
     "lambda:dev": "netlify-lambda serve src/lambda",
