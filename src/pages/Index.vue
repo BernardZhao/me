@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div class="flex flex-col-reverse md:flex-row p-6 items-center justify-center">
-      <div class="text-center md:text-left w-full md:mr-2 pb-4">
+      <div class="text-center md:text-left w-full md:mr-4 pb-4">
         <h1 class="name text-gray-900 leading-tight text-6xl md:text-7xl">Bernard Zhao</h1>
         <a href="https://github.com/BernardZhao" class="text-xl lg:text-2xl">
           @<span class="hover:underline">BernardZhao</span>
@@ -15,15 +15,10 @@
           >- {{quotes[quotes_counter][1]}}</span>
         </p>
       </div>
-      <!-- Terrible workaround, until https://github.com/gridsome/gridsome/issues/292 gets fixed. -->
-      <g-image
-        @click="increment('portraits_counter', 5)"
-        class="md:ml-2 rounded-full md:rounded-none object-cover h-64 w-64 md:h-auto md:w-auto"
-        :src="require(`!!assets-loader?width=800&quality=100!@images/${portraits[portraits_counter]}`)"
-      />
+      <gallery/>
     </div>
 
-    <article class="prose prose-sm lg:prose-lg xl:prose-2xl pl-8 pr-8 pt-8 max-w-none">
+    <article class="prose prose-sm lg:prose-lg xl:prose-xl pl-8 pr-8 pt-8 max-w-none">
       <h3>About</h3>
       <p>
         I am a student originally from the 916 Sacramento area.
@@ -75,13 +70,15 @@
 <script>
 import lastfm from "@/components/LastFM"
 import SongCard from "@/components/SongCard"
+import Gallery from "@/components/Gallery"
 export default {
   metaInfo: {
     title: "Me",
   },
   components: {
     lastfm,
-    SongCard
+    SongCard,
+    Gallery
   },
   data() {
     return {
@@ -92,14 +89,6 @@ export default {
         ["I'm a poggrammer", "Me"],
         ["I'm a salt water alligator eater", "Quavo"],
       ],
-      portraits_counter: 0,
-      portraits: [
-        "1.jpg",
-        "2.jpg",
-        "3.jpg",
-        "4.jpg",
-        "5.png",
-      ]
     };
   },
   methods: {
