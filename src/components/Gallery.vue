@@ -1,6 +1,6 @@
 <template>
   <!-- Terrible workaround, until https://github.com/gridsome/gridsome/issues/292 gets fixed. -->
-  <figure class="md:ml-4 max-w-lg max-h-lg min-w-lg min-h-lg">
+  <figure class="md:ml-4 max-w-lg h-64 w-64 md:w-full md:h-auto">
     <g-image
       v-if="portraits_counter == 0"
       @click="increment('portraits_counter', 5)"

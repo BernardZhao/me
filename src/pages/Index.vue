@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="flex flex-col-reverse md:flex-row p-6 items-center justify-center">
+    <div class="flex flex-col-reverse md:flex-row p-8 items-center justify-center">
       <div class="text-center md:text-left w-full md:mr-4 pb-4">
         <h1 class="name text-gray-900 leading-tight text-6xl md:text-7xl">Bernard Zhao</h1>
         <a href="https://github.com/BernardZhao" class="text-xl lg:text-2xl">
@@ -57,7 +57,7 @@
       <lastfm :request="{method: 'user.getrecenttracks', user: 'BernardZhao', limit: 5, format: 'json'}">
         <template slot-scope="{ data, error, loading }">
           <div v-if="loading"> Loading... </div>
-          <div v-else-if="error">{{error}}</div>
+          <div v-else-if="error">😖{{error}}</div>
           <div v-else-if="data">
             <song-card v-for="(track, index) in data.recenttracks.track" :key="index" :track="track" />
           </div>
